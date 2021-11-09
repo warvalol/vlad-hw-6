@@ -1,0 +1,153 @@
+body {
+  font-family: "Montserrat", "Kaushan Script", "Roboto", cursive, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  min-height: 65px;
+  /* отступ к AMAZING SERVICES */
+  margin-bottom: 128px;
+}
+
+.logo {
+  text-decoration: none;
+  color: #95e1d3;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {
+  text-transform: uppercase;
+}
+
+/* ul */
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-width: 491px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* li and a/link */
+
+.main-menu-link {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: normal;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #95e1d3;
+  /* анимация */
+  transition-property: color;
+  transition-duration: 400ms;
+  transition-timing-function: linear;
+}
+
+.main-menu-item a:hover {
+  color: rgb(243, 129, 129);
+}
+
+.main-menu-item a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(243, 129, 129, 0);
+  transition-property: transform, background-color;
+  transition-duration: 400ms;
+  transition-timing-function: linear;
+}
+
+.main-menu-link:hover::after {
+  display: block;
+  background-color: rgba(243, 129, 129, 1);
+  /* опускаю ::after на 10px вниз */
+  transform: translateY(10px);
+}
+
+/* AMAZING SERVICES */
+
+.conteiner-b {
+  width: 1182px;
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0px 0px 66px 0px;
+}
+
+.span-a {
+  display: block;
+  text-align: center;
+  font-family: "Kaushan Script";
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 23px;
+}
+
+.span-b {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.span-b::after {
+  content: "";
+  display: table;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(243, 129, 129);
+  margin: 0 auto;
+  margin-top: 42px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.services-item {
+  flex-basis: 350px;
+  margin-bottom: 100px;
+
+  /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 3);
+  padding: 10px;*/
+}
+
+/* подходит, но не идеально
+.services-item:nth-child(n + 4) {
+  margin-bottom: 0px;
+}*/
+
+.services-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 100px;
+}
+
+.image {
+}
