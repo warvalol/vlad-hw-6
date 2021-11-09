@@ -123,21 +123,21 @@ body {
   margin-top: 42px;
 }
 
+/* ul */
 .services-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .services-item {
+  display: flex;
   flex-basis: 350px;
-  margin-bottom: 100px;
-
-  /*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 3);
-  padding: 10px;*/
+  /*margin-bottom: 100px;*/
+  /*outline: 2px solid red;*/
 }
 
 /* подходит, но не идеально
@@ -150,4 +150,28 @@ body {
 }
 
 .image {
+  align-self: flex-start;
+  padding: 0px 25px 0px 0px;
+}
+
+h3 {
+  
+  font-family: "Montserrat";
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0px 0px 10px 0px;
+}
+
+.text {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: normal;
+  color: #cccccc;
+  line-height: 24px;
+  margin: 0;
+}
+
+.section-a {
+  margin-bottom: 92px;
 }
