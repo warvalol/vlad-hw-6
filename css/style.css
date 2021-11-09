@@ -7,6 +7,10 @@ body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
+
+  min-height: 100vh; /* это прижмет footer вниз страницы */
+  display: flex;
+  flex-direction: column; /* это прижмет footer вниз страницы */
 }
 
 .container {
@@ -242,12 +246,22 @@ h3 {
 
 .team-item:hover .gradient-box {
   opacity: 1;
-  background: linear-gradient(0deg, rgba(252, 227, 138, 0.8) 0%, rgba(243, 129,129, 0.8) 100%);
-  transform: translate(-10px, -10px); /* перемещение влево и вверх по 10px как и .photo-team*/
+  background: linear-gradient(
+    0deg,
+    rgba(252, 227, 138, 0.8) 0%,
+    rgba(243, 129, 129, 0.8) 100%
+  );
+  transform: translate(
+    -10px,
+    -10px
+  ); /* перемещение влево и вверх по 10px как и .photo-team*/
 }
 
 /* button */
-.facebook, .twitter, .pinterest, .instagram {
+.facebook,
+.twitter,
+.pinterest,
+.instagram {
   width: 55px;
   height: 55px;
   border: none;
@@ -262,7 +276,10 @@ h3 {
   background-position: center;
 }
 
-.facebook, .twitter, .pinterest, .instagram:not(:nth-last-of-type(1)) {
+.facebook,
+.twitter,
+.pinterest,
+.instagram:not(:nth-last-of-type(1)) {
   margin-right: 1px;
 }
 
@@ -274,7 +291,7 @@ h3 {
   background-image: url(../img/twitter.png);
 }
 
-.pinterest{
+.pinterest {
   background-image: url(../img/pinterest.png);
 }
 
@@ -282,7 +299,7 @@ h3 {
   background-image: url(../img/instagram.png);
 }
 
-.facebook:hover{
+.facebook:hover {
   background-color: #95e1d3;
 }
 
@@ -313,4 +330,61 @@ h3 {
   font-weight: normal;
   text-align: center;
   color: #acacac;
+}
+
+/* FOOTER */
+
+main::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin-top: 80px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 62px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+.colored-text {
+  color: #f38181;
+}
+
+form {
+  display: flex;
+  border: 1px solid #e5e5e5;
+}
+
+.email-button {
+  padding: 0px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #95e1d3;
+  width: 151px;
+  height: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.email {
+  border: none;
+  width: 228px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #cccccc;
+  font-style: italic;
 }
