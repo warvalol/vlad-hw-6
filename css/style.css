@@ -113,7 +113,7 @@ body {
   margin: 0 auto;
 }
 
-.section-a {
+.services {
   width: 1200px;
   margin-bottom: 92px;
 }
@@ -198,9 +198,9 @@ h3 {
   margin: 0;
 }
 
-/* MEET OUR TEAM - section-b */
+/* MEET OUR TEAM */
 
-.section-b {
+.our-team {
   width: 1200px;
   margin-bottom: 83px;
 }
