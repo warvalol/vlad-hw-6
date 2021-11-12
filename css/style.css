@@ -7,10 +7,16 @@ body {
 .wrapper {
   width: 100%;
   margin: 0 auto;
-
   min-height: 100vh; /* это прижмет footer вниз страницы */
   display: flex;
   flex-direction: column; /* это прижмет footer вниз страницы */
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  /* отступ к AMAZING SERVICES */
+  margin-bottom: 128px;
 }
 
 .container {
@@ -18,16 +24,15 @@ body {
   margin: 0 auto;
 }
 
-.page-header {
+.header-section {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
   min-height: 65px;
-  /* отступ к AMAZING SERVICES */
-  margin-bottom: 128px;
 }
 
 .logo {
+  display: flex;
+  align-self: center;
   text-decoration: none;
   color: #95e1d3;
   font-size: 30px;
@@ -37,21 +42,33 @@ body {
 }
 
 .main-nav {
+  display: flex;
+  align-items: flex-end;
+  align-self: center;
   text-transform: uppercase;
 }
 
 /* ul */
 .main-menu {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
-  min-width: 491px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 /* li and a/link */
+/*
+.main-menu-item {
+  margin-right: 30px;
+}
+*/
+
+.main-menu-item:not(:nth-last-child(-n + 1)) {
+  margin-right: 30px;
+}
 
 .main-menu-link {
   text-decoration: none;
@@ -60,6 +77,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #95e1d3;
+
   /* анимация */
   transition-property: color;
   transition-duration: 400ms;
@@ -90,9 +108,14 @@ body {
 
 /* AMAZING SERVICES */
 
-.conteiner-b {
-  width: 1182px;
+.container {
+  width: 1200px;
   margin: 0 auto;
+}
+
+.section-a {
+  width: 1200px;
+  margin-bottom: 92px;
 }
 
 .title {
@@ -173,10 +196,6 @@ h3 {
   color: #999999;
   line-height: 24px;
   margin: 0;
-}
-
-.section-a {
-  margin-bottom: 92px;
 }
 
 /* MEET OUR TEAM - section-b */
@@ -343,12 +362,13 @@ main::after {
   margin-top: 80px;
 }
 
-footer {
+.section-footer {
   display: flex;
-  width: 100%;
+  width: 1200px;
   height: 62px;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
 }
 
 .footer-info {
